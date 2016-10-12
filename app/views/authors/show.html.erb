@@ -10,7 +10,7 @@
     <p></p>
     <p><% array = []%>
      <% @author.books.each do |x| %>
-      <li><a href="books?id<%= x.id %>"><%= x.title %></a></li>
+      <li><a href="books?id=<%= x.id %>"><%= x.title %></a></li>
          <% end %>
       </p>
   </body>
