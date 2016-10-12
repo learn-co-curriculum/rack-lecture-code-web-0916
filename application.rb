@@ -10,8 +10,16 @@ class Application
     elsif request.get? && request.path == '/books'
       @books = Book.all
       render('books/index.html.erb')
+    elsif request.get? && request.path == '/authors' && request.params["id"]
+      @author = Author.find(request.params["id"])
+      render('authors/show.html.erb')
+    elsif request.get? && request.path == '/authors'
+      @authors = Author.all
+      render('authors/index.html.erb')
     else
       response = Rack::Response.new('<h1>Nothing here</h1>', 404)
+
+
     end
   end
 

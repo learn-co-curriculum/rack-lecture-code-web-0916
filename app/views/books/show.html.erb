@@ -7,7 +7,7 @@
   <body>
     <h1>Web 0916 Book App</h1>
     <h2><%= @book.title %></h2>
-    <p>by <%= @book.author.full_name %></p>
+    <p>by <a href="authors?id=<%=@book.author.id %>"><%= @book.author.full_name %></a></p>
     <p><%= @book.snippet %></p>
   </body>
 </html>
